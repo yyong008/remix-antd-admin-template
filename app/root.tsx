@@ -1,5 +1,6 @@
-import { cssBundleHref } from "@remix-run/css-bundle";
+
 import type { LinksFunction } from "@remix-run/node";
+
 import {
   Links,
   LiveReload,
@@ -7,9 +8,16 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  isRouteErrorResponse,
+  useRouteError,
 } from "@remix-run/react";
+import { cssBundleHref } from "@remix-run/css-bundle";
+
+// css
+import globalStyles from '~/styles/global.css';
 
 export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: globalStyles },
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
 
@@ -25,9 +33,49 @@ export default function App() {
       <body>
         <Outlet />
         <ScrollRestoration />
+        {process.env.NODE_ENV === "development" && <LiveReload />}
         <Scripts />
-        <LiveReload />
       </body>
     </html>
   );
+}
+
+
+export function ErrorBoundary() {
+  const error = useRouteError();
+
+  if (isRouteErrorResponse(error)) {
+    return (
+      <div>
+        <h1>
+          {error.status} {error.statusText}
+        </h1>
+        <p>{error.data}</p>
+      </div>
+    );
+  } else if (error instanceof Error) {
+    return (
+      <div style={{ padding: "0px 20px" }}>
+        <h1>Error</h1>
+        <p
+          style={{
+            textDecoration: "underline dotted #000",
+          }}
+        >
+          {error.message}
+        </p>
+        <p>The stack trace is:</p>
+        <pre
+          style={{
+            padding: "10px 10px",
+            backgroundColor: "rgba(255, 0, 0, 0.199)",
+          }}
+        >
+          {error.stack}
+        </pre>
+      </div>
+    );
+  } else {
+    return <h1>Unknown Error</h1>;
+  }
 }

@@ -1,38 +1,16 @@
-# Welcome to Remix!
+# Remix Antd Admin Template
 
-- [Remix Docs](https://remix.run/docs)
+## Stack
 
-## Development
+- 🌟 Remix main framework
+- 🏰 Ant Design design system
+- 🚀 RxJS has significant advantages in handling complex calculations
+- 💡 Atomic support with Tailwind CSS
+- 🧪 Component testing with Vitest
 
-From your terminal:
+## deps
 
-```sh
-npm run dev
-```
-
-This starts your app in development mode, rebuilding assets on file changes.
-
-## Deployment
-
-First, build your app for production:
-
-```sh
-npm run build
-```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
+- antd
+- @ant-design/icons
+- @ant-design/pro-components
+- tailwindcss
