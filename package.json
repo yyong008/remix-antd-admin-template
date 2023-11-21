@@ -1,6 +1,6 @@
 {
   "name": "remix-antd-admin-template",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "sideEffects": false,
   "type": "module",
   "keywords": [
@@ -61,7 +61,7 @@
   "engines": {
     "node": ">=18.0.0"
   },
-   "lint-staged": {
+  "lint-staged": {
     "app/**/*.{js,jsx,ts,tsx}": [
       "prettier --write",
       "eslint --fix"
