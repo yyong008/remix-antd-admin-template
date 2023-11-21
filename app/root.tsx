@@ -1,4 +1,3 @@
-
 import type { LinksFunction } from "@remix-run/node";
 
 import {
@@ -14,7 +13,7 @@ import {
 import { cssBundleHref } from "@remix-run/css-bundle";
 
 // css
-import globalStyles from '~/styles/global.css';
+import globalStyles from "~/styles/global.css";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: globalStyles },
@@ -39,7 +38,6 @@ export default function App() {
     </html>
   );
 }
-
 
 export function ErrorBoundary() {
   const error = useRouteError();

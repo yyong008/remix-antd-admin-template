@@ -6,5 +6,5 @@ export default function production() {
     <div>
       <BannerImage title="Production" src={home} style={{ height: "300px " }} />
     </div>
-  )
+  );
 }

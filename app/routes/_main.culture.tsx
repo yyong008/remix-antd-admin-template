@@ -6,5 +6,5 @@ export default function Culture() {
     <div>
       <BannerImage title="Culture" src={home} style={{ height: "300px " }} />
     </div>
-  )
+  );
 }

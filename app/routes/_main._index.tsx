@@ -82,24 +82,30 @@ export default function Home() {
             </div>
           </div>
         </div>
-      <div className="flex w-[90%] mx-auto my-0 mt-[10px] justify-between">
+        <div className="flex w-[90%] mx-auto my-0 mt-[10px] justify-between">
           <div className="basis-[33%] overflow-hidden relative">
             <div className="absolute top-0 w-[100%] h-[200px]">
               <img className="w-[100%] h-[100%]" src={home} alt="" />
             </div>
-            <div className="relative flex justify-center items-center w-[100%] h-[200px] text-gray-100 z-10">企业文化</div>
+            <div className="relative flex justify-center items-center w-[100%] h-[200px] text-gray-100 z-10">
+              企业文化
+            </div>
           </div>
           <div className="basis-[33%] overflow-hidden relative">
             <div className="absolute top-0 w-[100%] h-[200px]">
               <img className="w-[100%] h-[100%]" src={home} alt="" />
             </div>
-            <div className="relative flex justify-center items-center w-[100%] h-[200px] text-gray-100 z-10">企业文化</div>
+            <div className="relative flex justify-center items-center w-[100%] h-[200px] text-gray-100 z-10">
+              企业文化
+            </div>
           </div>
           <div className="basis-[33%] overflow-hidden relative">
             <div className="absolute top-0 w-[100%] h-[200px]">
               <img className="w-[100%] h-[100%]" src={home} alt="" />
             </div>
-            <div className="relative flex justify-center items-center w-[100%] h-[200px] text-gray-100 z-10">企业文化</div>
+            <div className="relative flex justify-center items-center w-[100%] h-[200px] text-gray-100 z-10">
+              企业文化
+            </div>
           </div>
         </div>
       </div>

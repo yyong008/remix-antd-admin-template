@@ -24,7 +24,7 @@ export default function Index() {
             <NavLink
               to="/"
               end
-              className={({isActive}) => {
+              className={({ isActive }) => {
                 return isActive ? "text-blue-500 " : "hover:text-blue-500";
               }}
             >
@@ -33,7 +33,7 @@ export default function Index() {
           </span>
           <span className="mx-[10px] hover:text-blue-500">
             <NavLink
-              className={({isActive}) => {
+              className={({ isActive }) => {
                 return isActive ? "text-blue-500 " : "hover:text-blue-500";
               }}
               to="/production"
@@ -44,7 +44,7 @@ export default function Index() {
           </span>
           <span className="mx-[10px] hover:text-blue-500">
             <NavLink
-              className={({isActive}) => {
+              className={({ isActive }) => {
                 return isActive ? "text-blue-500 " : "hover:text-blue-500";
               }}
               to="/news"
